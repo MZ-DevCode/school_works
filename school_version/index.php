@@ -60,7 +60,7 @@
     <h3>Kontakt</h3>
     <p>telefon: 123123123<br>
        e-mail: <a href="mailto:bok@sklep.pl">bok@sklep.pl</a></p>
-    <img src="promocja2.png" alt="promocja">
+    <img src="assets/promocja.png" alt="promocja">
 </div>
 </main>
     <div class="stopka"><h4>Autor strony: XXX</h4></div>

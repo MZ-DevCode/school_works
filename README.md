@@ -21,7 +21,7 @@ A simple web-based shop interface that interacts with a MySQL database to displa
    - Create a database named `sklep2`.
    - Import the SQL dump file:
      ```
-     mysql -u root -p sklep2 < your_database_file.sql
+     mysql -u root -p sklep2 < school_version/sklep.sql
      ```
 2. **Server Configuration**:
    - Ensure you have PHP and MariaDB installed.

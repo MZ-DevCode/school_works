@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.log
+*.tmp
+*.swp
+
+.vscode/
+.idea/
+*.sublime-project
+
+.phpunit.result.cache
+.php_cs.cache

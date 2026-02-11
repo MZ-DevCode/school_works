@@ -13,7 +13,7 @@
     <h3>Promocja 15% obejmuje artykuły:</h3>
     <ul>
         <?php
-        $connect = mysqli_connect("localhost", "root", "", "sklep2");
+        $connect = mysqli_connect("localhost", "root", "", "sklep");
 
         $sql1 = "SELECT nazwa FROM towary WHERE promocja = 1";
         $query1 = mysqli_query($connect, $sql1);

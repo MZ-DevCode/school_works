@@ -1,0 +1,12 @@
+<?php
+
+$colors = ["Red", "Green", "Blue"];
+
+
+foreach ($colors as $color){
+	echo "Color: $color";
+}
+
+
+
+?>

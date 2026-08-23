@@ -17,15 +17,14 @@
             const output = document.getElementById('output');
 
             button.addEventListener('click', function(){
-              Number(input);
-              result = input * 2;
+              const result = Number(input.value) * 2;
               output.textContent(result);
-              if result > 50{
-                output.style.color('red');
+              if (result > 50){
+                output.style.color = 'red';
               } else{
-                output.style.color('blue');
+                output.style.color = 'blue';
               }
-            })
+            });
     </script>
 </body>
 </html>

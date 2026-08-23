@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+
+    <input type="text" id="numberInput">
+    <button id="submit">Submit</button>
+    <p id="output"></p>
+
+    <script>
+            const input = document.getElementById('numberInput');
+            const button = document.getElementById('submit');
+            const output = document.getElementById('output');
+
+            button.addEventListener('click', function(){
+              Number(input);
+              result = input * 2;
+              output.textContent(result);
+              if result > 50{
+                output.style.color('red');
+              } else{
+                output.style.color('blue');
+              }
+            })
+    </script>
+</body>
+</html>

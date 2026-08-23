@@ -1,0 +1,12 @@
+<?php
+
+function calculate(float $price, int $quantity): float{
+	return $price * $quantity;
+}
+
+$total = calculateTotal(49.999, 3);
+
+echo "Total: $total";
+
+
+?>

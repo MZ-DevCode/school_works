@@ -5,7 +5,7 @@ desktop.ini
 *.log
 *.tmp
 *.swp
-
+.db
 .vscode/
 .idea/
 *.sublime-project

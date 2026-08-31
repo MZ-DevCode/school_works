@@ -20,8 +20,8 @@
 		<?php
 		$conn = mysqli_connect("localhost, "root, "", "kino");
 
-		
-
+		while($a)			
+	
 
 
 		?>
@@ -29,7 +29,7 @@
 </main>
 
 <footer>
-	<strong><p>Autor: </p><strong>
+	<strong><p>Autor: XXX</p><strong>
 </footer>
 </body>
 </html>

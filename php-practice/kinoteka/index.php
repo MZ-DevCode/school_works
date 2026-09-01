@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pl"> //zadeklarowany polski język zawartości witryny
 <head>
 	<meta charset="utf-8"> //jawnie zastosowany właściwy standard kodowania polskich znaków
@@ -20,9 +20,15 @@
 		<?php
 		$conn = mysqli_connect("localhost, "root, "", "kino");
 
-		while($a)			
-	
+	    $query = "SELECT * FROM aktorzy ORDER BY imie ASC"
 
+        $result = mysql_query($conn, $query)
+
+        while($row = mysqli_fetch_assoc($result)){
+
+        }
+
+        mysqli_close($conn);
 
 		?>
 	</div>
@@ -33,4 +39,3 @@
 </footer>
 </body>
 </html>
-

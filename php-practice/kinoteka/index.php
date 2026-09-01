@@ -22,10 +22,12 @@
 
 	    $query = "SELECT * FROM aktorzy ORDER BY imie ASC"
 
-        $result = mysql_query($conn, $query)
+        $result = mysqli_query($conn, $query)
 
         while($row = mysqli_fetch_assoc($result)){
-
+            echo "
+            <p><p>
+            "
         }
 
         mysqli_close($conn);

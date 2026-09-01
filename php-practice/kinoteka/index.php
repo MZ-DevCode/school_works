@@ -25,9 +25,12 @@
         $result = mysqli_query($conn, $query)
 
         while($row = mysqli_fetch_assoc($result)){
-            echo "
-            <p><p>
-            "
+            $pelne_imie = $row['imie'] . ' ' . $row['nazwisko'];
+                echo "
+                <a href='aktor.php?id={$row['id']}' class='index-aktor'>
+                        <img src='{$row['plik_awatara']}' alt='{$pelne_imie}' title='{$pelne_imie}'>
+                        <p>{$pelne_imie}</p>
+                </a>";
         }
 
         mysqli_close($conn);

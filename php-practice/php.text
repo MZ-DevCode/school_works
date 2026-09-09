@@ -1,11 +1,23 @@
-mysqli_fetch_assoc() — возвращает строку результата в виде ассоциативного массива (доступ по именам колонок).
-
-mysqli_fetch_array() — возвращает строку в виде массива с ассоциативными и числовыми ключами одновременно.
-
 mysqli_fetch_row() — возвращает строку в виде числового массива (доступ только по индексам 0, 1, 2...).
+
+while ($row = mysqli_fetch_row($result)) {
+echo $row[0];       // только по индексу
+}
 
 mysqli_fetch_object() — возвращает строку в виде объекта (доступ к полям через стрелочку ->).
 
+while ($row = mysqli_fetch_object($result)) {
+echo $row->nazwa;   // через стрелочку
+}
+
 mysqli_num_rows() — возвращает количество строк, полученных в результате выполнения SQL-запроса.
 
+$result = mysqli_query($conn, "SELECT * FROM gry");
+$ile = mysqli_num_rows($result);
+echo $ile;
+
 mysqli_affected_rows() — возвращает количество строк, затронутых последним запросом изменения данных (INSERT, UPDATE, DELETE).
+
+mysqli_query($conn, "DELETE FROM gry WHERE id = 1");
+$zmiany = mysqli_affected_rows($conn);
+echo $zmiany;

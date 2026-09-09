@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost", "root, "", "gry");
+    $conn = mysqli_connect("localhost", "root", "", "gry");
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="naglowkowy">
-        <h1>Rankieng gier komputerowych</h1>
+        <h1>Ranking gier komputerowych</h1>
     </div>
     <div class="lewy">
         <h3>Top 5 gier w tym miesiącu</h3>
@@ -31,6 +31,14 @@
     <main>
         <?php
         // skrypt 2
+        $query2 = "SELECT id, nazwa, zdjecie FROM gry:";
+        $result2 = mysqli_query($conn, $query2);
+        while ($row = mysqli_fetch_object($result2)){
+                echo "<div>";
+                echo "<img src='{$row->zdjecie}' alt='{$row->nazwa}'title='{$row->id}''>'";
+                echo "<p>{$row->nazwa}</p>";
+                echo "</div>";
+            };
         ?>
     </main>
 
@@ -46,15 +54,15 @@
         </form>
     </div>
 
-</body>
-<footer>
-    <form action="gry.php" method="POST">
-            <input type="number" name="id_gry">
-            <input type="submit" name="pokaz" value="Pokaż opis">
-        </form>
-    <?php
-    //skrypt 3
+    <footer>
+        <form action="gry.php" method="POST">
+                <input type="number" name="id_gry">
+                <input type="submit" name="pokaz" value="Pokaż opis">
+            </form>
+        <?php
+        //skrypt 3
 
-     mysqli_close($conn);
-    ?>
-</footer>
+         mysqli_close($conn);
+        ?>
+    </footer>
+</body>

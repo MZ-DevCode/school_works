@@ -19,25 +19,29 @@
                 // skrypt 1
                 ?>
             </li>
-        <ul>
+        </ul>
             <h3>Nasz sklep</h3>
-            <a href="http://sklep.gry.pl">Tu kupisz gry/a>
+            <a href="http://sklep.gry.pl">Tu kupisz gry</a>
     </div>
-    <div class="prawy">
-        <h3>Dodaj nowa gre</h3>
-        <form>
-            nazwa<input type="text" name="nazwa">
-            opis<input type="text" name="opis">
-            cena<input type="text" name="cena">
-            zdjecie<input type="text" name="zdjecie">
-            <input type="button" name="Dodaj">DODAJ
-        </form>
-    </div>
+
     <main>
         <?php
         // skrypt 2
         ?>
     </main>
+
+
+    <div class="prawy">
+        <h3>Dodaj nową grę</h3>
+        <form>
+            nazwa <input type="text" name="nazwa"><br>
+            opis <input type="text" name="opis"><br>
+            cena <input type="text" name="cena"><br>
+            zdjecie <input type="text" name="zdjecie"><br>
+            <input type="submit" name="dodaj" value="DODAJ">
+        </form>
+    </div>
+
 </body>
 <footer>
     <?php

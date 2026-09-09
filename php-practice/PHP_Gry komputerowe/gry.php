@@ -44,6 +44,10 @@
 
 </body>
 <footer>
+    <form action="gry.php" method="POST">
+            <input type="number" name="id_gry">
+            <input type="submit" name="pokaz" value="Pokaż opis">
+        </form>
     <?php
     //skrypt 3
 

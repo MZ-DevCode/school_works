@@ -19,8 +19,8 @@
                 $query1 = "SELECT nazwa, punkty FROM gry ORDER BY punkty DESC LIMIT 5";
                 $result1 = mysqli_query($conn, $query1);
 
-                while ($row = mysqli_fetch_array($result1)){
-                    echo "<li class='liczba-punktow'>" . $row['nazwa'] . " " . $row['punkty'] . "</li>";
+                while ($row = mysqli_fetch_object($result1)){
+                    echo "<li class='liczba-punktow'> {$row->nazwa} {$row->punkty} </li>";
                 }
             ?>
         </ul>

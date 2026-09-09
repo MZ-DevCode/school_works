@@ -1,9 +1,9 @@
 <?php
-    $conn = mysqli_connect("localhost, "root, "", "kino");
+    $conn = mysqli_connect("localhost", "root, "", "gry");
 ?>
 
 <!DOCTYPE html>
-<html lang="pl"> //zadeklarowany polski język zawartości witryny
+<html lang="pl"> <!-- zadeklarowany polski język zawartości witryny -->
 <head>
     <title>Gry komputerowe</title>
 </head>
@@ -14,11 +14,15 @@
     <div class="lewy">
         <h3>Top 5 gier w tym miesiącu</h3>
         <ul>
-            <li>
-                <?php
+            <?php
                 // skrypt 1
-                ?>
-            </li>
+                $query1 = "SELECT nazwa, punkty FROM gry ORDER BY punkty DESC LIMIT 5";
+                $result1 = mysqli_query($conn, $query1);
+
+                while ($row = mysqli_fetch_array($result1)){
+                    echo "<li class='liczba-punktow'>" . $row['nazwa'] . " " . $row['punkty'] . "</li>";
+                }
+            ?>
         </ul>
             <h3>Nasz sklep</h3>
             <a href="http://sklep.gry.pl">Tu kupisz gry</a>

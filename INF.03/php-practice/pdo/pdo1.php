@@ -29,10 +29,10 @@ try {
     $stmtInsert->execute(["Футболка Oversize", 1499.99, 10]);
     echo "Товар успешно добавлен<br><br>";
     $stmtSelect = $pdo->query("SELECT id, name, price, stock FROM products");
-    $products = $stmtSelect->fetchAll(PDO::FETCH_ASSOC);
+    $products = $stmtSelect->fetchAll(PDO::FETCH_OBJ);
     echo "Успешное подключение";
 
-    echo "<b>Каталог товаров</b>"
+    echo "<b>Каталог товаров</b>";
     foreach ($products as $product) {
             echo "ID: {$product->id}<br>";
             echo "Название: {$product->name}<br>";

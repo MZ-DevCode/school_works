@@ -125,7 +125,7 @@ $obiekty = [
     <h2>Opis miejsca</h2>
 
     <section>
-        <img class="zdjecie-obiektu" src="" alt="">
+        <img class="zdjecie-obiektu" src="godafoss.jpg" alt="">
 
         <h2>Nazwa</h2>
 

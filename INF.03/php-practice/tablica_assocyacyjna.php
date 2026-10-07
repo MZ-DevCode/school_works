@@ -8,20 +8,18 @@ $autobus = [
     "numer" => 144
 ];
 
-$tabela = "<table border='1'>\n";
+echo "<table border='1'>\n";
 
 foreach ($autobus as $key => $value) {
-    $tabela .= <<<HTML
+    echo <<<HTML
     <tr>
         <td><strong>{$key}</strong></td>
-        <td><strong>{$value}</storng></td>
+        <td><strong>{$value}</strong></td>
     </tr>
-    \n
+    
     HTML;
 }
 
-$tabela .= "</table>";
-
-echo $tabela;
+echo "</table>";
 
 ?>

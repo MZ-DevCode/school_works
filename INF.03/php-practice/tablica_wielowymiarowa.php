@@ -1,6 +1,5 @@
 <?php
 
-
 $flotaAutobusow = [
     [
         "firma" => "Solaris",
@@ -25,11 +24,20 @@ $flotaAutobusow = [
     ]
 ];
 
-foreach ($flotaAutobusow as $autobus){
-	foreach ($autobus as $key => $value){
-		echo $key . ": " . $value . "<br>";
-	}
+echo "<table border='1'>\n";
+
+foreach ($flotaAutobusow as $autobus) {
+    foreach ($autobus as $key => $value) {
+        echo <<<HTML
+        <tr>
+            <td><strong>{$key}</strong></td>
+            <td><strong>{$value}</strong></td>
+        </tr>
+        
+        HTML;
+    }
 }
 
+echo "</table>";
 
 ?>

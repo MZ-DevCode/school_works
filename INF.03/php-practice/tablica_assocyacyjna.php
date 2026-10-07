@@ -11,10 +11,13 @@ $autobus = [
 echo "<table border='1'>\n";
 
 foreach ($autobus as $key => $value) {
-    echo <<<HTML
+	$sKey = strtoupper($key);
+	$nValue = str_replace("Warszawa", "Warszawa Glowna", $value);
+	$nnValue = strtoupper($nValue);
+   echo <<<HTML
     <tr>
-        <td><strong>{$key}</strong></td>
-        <td><strong>{$value}</strong></td>
+        <td><strong>{$sKey}</strong></td>
+        <td><strong>{$nnValue}</strong></td>
     </tr>
     
     HTML;

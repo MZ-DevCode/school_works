@@ -10,7 +10,7 @@ $autobus = [
 ];
 
 foreach ($autobus as $key => $value){
-	echo $key . ": " . $value . "\n";
+	echo $key . ": " . $value . "<br>";
 }
 
 

@@ -123,6 +123,12 @@
                 echo "Prowadzancy: {$kurs["prowadzacy"]} <br>";
                 echo "Godziny: {$kurs["godziny"]} <br>";
                 echo "Cena: {$kurs["cena"]} <br>";
+
+                if ($kurs["dostepny"] == true){
+                    echo "Dostępny";
+            } else{
+                echo "Brak miejsc";
+            }
             }
             // ZADANIE 1–3: foreach, article, h3, dane kursu i warunek if.
             ?>

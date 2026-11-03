@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katalog kursów informatycznych – zadanie PHP</title>
-    <style> 
+    <style>
 		body {
 			font-family: Arial;
 			background-color: lightblue;
@@ -37,7 +37,7 @@
 			padding: 10px;
 			margin: 10px;
 		}
- 
+
     </style>
 </head>
 <body id="start">
@@ -45,16 +45,16 @@
 	KATALOG KURSÓW INFORMATYCZNYCH
     Temat: tablice wielowymiarowe i asocjacyjne, foreach, if, formularze GET i POST. Maksymalna liczba punktów: 30
 
-    INSTRUKCJA: 
+    INSTRUKCJA:
 	Znaczniki semantyczne HTML i style CSS są gotowe. Nie zmieniaj ich. Uzupełnij wyłącznie oznaczone fragmenty PHP.
 
     CZĘŚĆ I – TABLICA I LISTA KURSÓW (10 pkt)
     1. Korzystając z tablicy $kursy, wyświetl w pierwszej sekcji wszystkie kursy za pomocą pętli foreach. (3 pkt)
     2. Dla każdego kursu utwórz wewnątrz pętli <article>, w którym wyświetlisz:
-		- nazwę kursu w <h3>, 
-		- prowadzącego, 
-		- liczbę godzin 
-		- cenę w zł. 
+		- nazwę kursu w <h3>,
+		- prowadzącego,
+		- liczbę godzin
+		- cenę w zł.
 		(5 pkt)
     3. Przy kursie wyświetl napis "Dostępny", gdy pole dostepny ma wartość true, w przeciwnym razie "Brak miejsc". Użyj if. (2 pkt)
 
@@ -72,31 +72,31 @@
     <?php
     $kursy = [
         1 => [
-			"nazwa" => "Podstawy HTML", 
-			"prowadzacy" => "Anna Nowak", 
-			"godziny" => 12, 
-			"cena" => 150, 
+			"nazwa" => "Podstawy HTML",
+			"prowadzacy" => "Anna Nowak",
+			"godziny" => 12,
+			"cena" => 150,
 			"dostepny" => true
 		],
         2 => [
-			"nazwa" => "Programowanie w Pythonie", 
-			"prowadzacy" => "Jan Kowalski", 
-			"godziny" => 20, 
-			"cena" => 300, 
+			"nazwa" => "Programowanie w Pythonie",
+			"prowadzacy" => "Jan Kowalski",
+			"godziny" => 20,
+			"cena" => 300,
 			"dostepny" => true
 		],
         3 => [
-			"nazwa" => "Bazy danych MySQL", 
-			"prowadzacy" => "Ewa Zielińska", 
-			"godziny" => 16, 
-			"cena" => 250, 
+			"nazwa" => "Bazy danych MySQL",
+			"prowadzacy" => "Ewa Zielińska",
+			"godziny" => 16,
+			"cena" => 250,
 			"dostepny" => false
 		],
         4 => [
-			"nazwa" => "Podstawy PHP", 
-			"prowadzacy" => "Piotr Wiśniewski", 
-			"godziny" => 18, 
-			"cena" => 280, 
+			"nazwa" => "Podstawy PHP",
+			"prowadzacy" => "Piotr Wiśniewski",
+			"godziny" => 18,
+			"cena" => 280,
 			"dostepny" => true
 		]
     ];
@@ -117,6 +117,13 @@
             <h2>Dostępne kursy</h2>
 
             <?php
+            foreach($kursy as $kurs){
+                echo "<article>";
+                echo "Nazwa: <h3>{$kurs["nazwa"]}</h3><br>";
+                echo "Prowadzancy: {$kurs["prowadzacy"]} <br>";
+                echo "Godziny: {$kurs["godziny"]} <br>";
+                echo "Cena: {$kurs["cena"]} <br>";
+            }
             // ZADANIE 1–3: foreach, article, h3, dane kursu i warunek if.
             ?>
         </section>

@@ -145,6 +145,8 @@
             </form>
 
             <?php
+            $name = $_POST["imie"];
+            $name = $_POST["nazwisko"];
             // ZADANIE 4–6: odczytaj POST, sprawdź oba pola i wyświetl powitanie.
             // Pamiętaj o htmlspecialchars() przy wypisywaniu danych użytkownika.
             ?>

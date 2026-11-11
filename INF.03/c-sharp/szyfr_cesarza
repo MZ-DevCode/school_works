@@ -1,0 +1,36 @@
+using System;
+
+public class HelloWorld {
+    public static void Main(string[] args) {
+        Console.WriteLine("Wybierz dzialanie: \n1. Szyfrowanie \n2. Deszyfrowanie");
+        int wybor = int.Parse(Console.ReadLine());
+
+        Console.Write("Wpisz tekst: ");
+        string text = Console.ReadLine();
+        
+        Console.Write("Wpisz klucz: ");
+        int klucz = int.Parse(Console.ReadLine());
+
+        string szyfr = "";
+        
+        switch (wybor) {
+            case 1:
+                for (int i = 0; i < text.Length; i++) {
+                    char znak = text[i];
+                    char nowyZnak = (char)(znak + klucz);
+                    szyfr += nowyZnak;
+                }
+                Console.WriteLine("Wynik: " + szyfr);
+                break;
+
+            case 2:
+                for (int i = 0; i < text.Length; i++) {
+                    char znak = text[i];
+                    char nowyZnak = (char)(znak - klucz);
+                    szyfr += nowyZnak;
+                }
+                Console.WriteLine("Wynik: " + szyfr);
+                break;
+        }
+    }
+}

@@ -6,6 +6,10 @@
          <title>Poziomy rzek</title>
     </head>
     <body>
-        <div><div>
+        <div class="baner1"><div>
+        <div class="baner2"><div>
+        <div class="lewy"><div>
+        <div class="prawy"><div>
+        <div class="stopka"><div>
     </body>
 </html>
